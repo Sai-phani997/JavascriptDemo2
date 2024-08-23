@@ -7,10 +7,10 @@ document.getElementById("submitBtn").addEventListener("click", () => {
         return;
     }
 
-    Prime1(number);
+    printPrimeNumbers(number);
 });
 
-function prime(number) {
+const checkPrime = (number) => {
     if (number <= 1) {
         return false;
     }
@@ -20,21 +20,18 @@ function prime(number) {
         }
     }
     return true;
-}
+};
 
-function Prime1(input) {
+const  printPrimeNumbers = (input)  => {
     for (let i = 2; i <= input; i++) {
-        if (prime(i)) {
+        if (checkPrime(i)) {
             setTimeout(() => {
                 console.log(`${i} is a prime number`);
             }, i * 1000); 
-        } else {
-            setTimeout(() => {
-                console.log(`${i} is not a prime number`);
-            }, i * 1000); 
         }
     }
-}
+};
+
 
 
 
